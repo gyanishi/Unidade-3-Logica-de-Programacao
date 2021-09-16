@@ -114,7 +114,7 @@ void cadCliente(CLIENTE **cliente) {
 		fgets(nomm, sizeof(nomm), stdin);
 		printf("Ano de Nascimento: ");
 		scanf("%d", &anoNass);
-		printf("Valor gasto no mês(R$): ");
+		printf("Valor gasto no mês: R$ ");
 		scanf("%f", &valorMee);
 		
 		for(o = 0; o < maxCliente; o++){
@@ -163,7 +163,7 @@ void remCliente(CLIENTE **cliente) {
 				printf("Cliente - %d\n", i);
 				printf("Nome: %s", (*(*cliente+i)).nome);
 				printf("Ano de nascimento: %d\n", (*(*cliente+i)).anoNasc);
-				printf("Valor gasto no mês: %.2f\n", (*(*cliente+i)).valorMes);
+				printf("Valor gasto no mês: R$ %.2f\n", (*(*cliente+i)).valorMes);
 				printf("====================\n");
 			}
 		}
@@ -177,7 +177,7 @@ void remCliente(CLIENTE **cliente) {
 				printf("Tem certeza que deseja excluir o cliente %d permanentemente?\n", selecaox);
 				printf("Nome: %s", (*(*cliente+selecaox)).nome);
 				printf("Ano de nascimento: %d\n", (*(*cliente+selecaox)).anoNasc);
-				printf("Valor gasto no mês: %.2f\n", (*(*cliente+selecaox)).valorMes);
+				printf("Valor gasto no mês: R$ %.2f\n", (*(*cliente+selecaox)).valorMes);
 				printf("====================\n");
 				printf("1 - Sim\n");
 				printf("2 - Não\n");
@@ -221,7 +221,7 @@ void listCliente(CLIENTE **cliente) {
 				printf("Cliente - %d\n", i);
 				printf("Nome: %s", (*(*cliente+i)).nome);
 				printf("Ano de nascimento: %d\n", (*(*cliente+i)).anoNasc);
-				printf("Valor gasto no mês: %.2f\n", (*(*cliente+i)).valorMes);
+				printf("Valor gasto no mês: R$ %.2f\n", (*(*cliente+i)).valorMes);
 				printf("====================\n");
 			}
 		}
@@ -258,7 +258,7 @@ void melCliente(CLIENTE **cliente) {
 			printf("Cliente - %d\n", i);
 			printf("Nome: %s", (*(*cliente+i)).nome);
 			printf("Ano de nascimento: %d\n", (*(*cliente+i)).anoNasc);
-			printf("Valor gasto no mês: %.2f\n", (*(*cliente+i)).valorMes);
+			printf("Valor gasto no mês: R$ %.2f\n", (*(*cliente+i)).valorMes);
 			printf("====================\n");
 			printf("1 - Sair\n");
 			printf("Opção: ");
@@ -282,7 +282,7 @@ void comCliente(CLIENTE **cliente) {
 			printf("Cliente - %d\n", selecao);
 			printf("Nome: %s", (*(*cliente+selecao)).nome);
 			printf("Ano de nascimento: %d\n", (*(*cliente+selecao)).anoNasc);
-			printf("Valor gasto no mês: %.2f\n", (*(*cliente+selecao)).valorMes);
+			printf("Valor gasto no mês: R$ %.2f\n", (*(*cliente+selecao)).valorMes);
 		} else if (selecao == 0) {
 			system("cls");
 			printf("Digite 2 para sair\n");
@@ -312,7 +312,7 @@ void atuCliente(CLIENTE **cliente) {
 					printf("Cliente - %d\n", i);
 					printf("Nome: %s", (*(*cliente+i)).nome);
 					printf("Ano de nascimento: %d\n", (*(*cliente+i)).anoNasc);
-					printf("Valor gasto no mês: %.2f\n", (*(*cliente+i)).valorMes);
+					printf("Valor gasto no mês: R$ %.2f\n", (*(*cliente+i)).valorMes);
 					printf("====================\n");
 				}
 			}
@@ -325,7 +325,7 @@ void atuCliente(CLIENTE **cliente) {
 					printf("Cliente - %d\n", selecao);
 					printf("Nome: %s", (*(*cliente+selecao)).nome);
 					printf("Ano de nascimento: %d\n", (*(*cliente+selecao)).anoNasc);
-					printf("Valor gasto no mês: %.2f\n", (*(*cliente+selecao)).valorMes);
+					printf("Valor gasto no mês: R$ %.2f\n", (*(*cliente+selecao)).valorMes);
 					printf("====================\n");
 					printf("Selecione uma opção\n");
 					printf("1 - Mudar o valor\n");
@@ -338,8 +338,8 @@ void atuCliente(CLIENTE **cliente) {
 						system("cls");
 						valor = 0;
 						printf("====================\n");
-						printf("Valor gasto do mês do cliente %d: %.2f\n",selecao, (*(*cliente+selecao)).valorMes);
-						printf("Valor a ser mudado: ");
+						printf("Valor gasto do mês do cliente %d: R$ %.2f\n",selecao, (*(*cliente+selecao)).valorMes);
+						printf("Valor a ser mudado: R$ ");
 						scanf("%f", &valor);
 						(*(*cliente+selecao)).valorMes = valor;
 						printf("Valor atualizado com sucesso\n");
@@ -347,8 +347,8 @@ void atuCliente(CLIENTE **cliente) {
 						system("cls");
 						valor = 0;
 						printf("====================\n");
-						printf("Valor gasto do mês do cliente %d: %.2f\n",selecao, (*(*cliente+selecao)).valorMes);
-						printf("Valor a ser incrementado: ");
+						printf("Valor gasto do mês do cliente %d: R$ %.2f\n",selecao, (*(*cliente+selecao)).valorMes);
+						printf("Valor a ser incrementado: R$ ");
 						scanf("%f", &valori);
 						(*(*cliente+selecao)).valorMes = (*(*cliente+selecao)).valorMes + valori;
 						printf("Valor atualizado com sucesso\n");
@@ -387,7 +387,7 @@ void limCliente(CLIENTE **cliente) {
 				printf("Cliente - %d\n", i);
 				printf("Nome: %s", (*(*cliente+i)).nome);
 				printf("Ano de nascimento: %d\n", (*(*cliente+i)).anoNasc);
-				printf("Valor gasto no mês: %.2f\n", (*(*cliente+i)).valorMes);
+				printf("Valor gasto no mês: R$ %.2f\n", (*(*cliente+i)).valorMes);
 				printf("====================\n");
 			}
 		}
